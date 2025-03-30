@@ -1,7 +1,7 @@
 import {create} from "zustand"
 import axios from "axios"
 import { loadGapiInsideDOM } from "gapi-script";
-const API_URL="http://localhost:5000/api/auth"
+const API_URL="https://warrenty-me-assignment.onrender.com/api/auth"
 axios.defaults.withCredentials = true;
 // with every request it will send cookies with it.
 
