@@ -29,7 +29,7 @@ function TextEditor() {
   const { googleAccessToken, user, reauthenticateUser } = useAuthStore();
 
   useEffect(() => {
-    const s = io("http://localhost:5000");
+    const s = io("https://warrenty-me-assignment.onrender.com");
     setSocket(s);
     return () => s.disconnect();
   }, []);
@@ -107,7 +107,7 @@ function TextEditor() {
       setUploadStatus("Uploading to Google Drive...");
 
       const response = await fetch(
-        "http://localhost:5000/api/documents/upload",
+        "https://warrenty-me-assignment.onrender.com/api/documents/upload",
         {
           method: "POST",
           headers: {
