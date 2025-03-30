@@ -8,7 +8,7 @@ function DashboardPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/documents")
+    fetch("https://warrenty-me-assignment.onrender.com/api/documents")
       .then((res) => res.json())
       .then((data) => setDocuments(data))
       .catch((err) => console.error("Error fetching documents", err));
@@ -19,7 +19,7 @@ function DashboardPage() {
   };
 
   const createNewDocument = async () => {
-    const response = await fetch("http://localhost:5000/api/documents", {
+    const response = await fetch("https://warrenty-me-assignment.onrender.com/api/documents", {
       method: "POST",
     });
     const newDoc = await response.json();
